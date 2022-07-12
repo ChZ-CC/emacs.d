@@ -19,6 +19,12 @@
 ;; Official MELPA Mirror, in case necessary.
 ;;(add-to-list 'package-archives (cons "melpa-mirror" (concat proto "://www.mirrorservice.org/sites/melpa.org/packages/")) t)
 
+;; elpa 镜像
+;; (add-to-list 'package-archives '( "melpa" . "http://elpa.emacs-china.org/melpa/") t)
+;; (add-to-list 'package-archives '( "gnu" . "http://elpa.emacs-china.org/gnu/") t)
+;; (add-to-list 'package-archives '( "org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/") t)
+;; (add-to-list 'package-archives '( "marmalade" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/marmalade/") t)
+
 
 
 ;; Work-around for https://debbugs.gnu.org/cgi/bugreport.cgi?bug=34341
