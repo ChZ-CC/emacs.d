@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;; 定义字体变量
-(defvar cc-fonts-default '("Sometype Mono" "Cascadia Code PL" "Menlo" "Consolas"))
+(defvar cc-fonts-default '("Sometype Mono" "Cascadia Code" "Menlo" "Consolas"))
 (defvar cc-fonts-unicode '("Segoe UI Symbol" "Symbola" "Symbol"))
 (defvar cc-fonts-emoji '("Noto Color Emoji" "Apple Color Emoji"))
 (defvar cc-fonts-cjk '("KaiTi" "STKaiTi" "WenQuanYi Micro Hei"))
@@ -28,7 +28,7 @@
           (f-uni (cc-find-font (plist-get args :unicode) cc-fonts-unicode))
           (f-emo (cc-find-font (plist-get args :emoji) cc-fonts-emoji))
           (f-cjk (cc-find-font (plist-get args :cjk) cc-fonts-cjk)))
-      (set-face-attribute 'default nil :family f-def  :height 145 :weight normal)
+      (set-face-attribute 'default nil :family f-def  :height 145 :weight 'normal)
       (setq face-font-rescale-alist `((,f-cjk . 1.2)))
       (dolist (pair `((unicode  . ,f-uni)
 		      (emoji    . ,f-emo)

@@ -7,8 +7,9 @@
 
 ;; Font
 ;; Download Victor Mono at https://rubjo.github.io/victor-mono/
-(set-face-attribute 'default nil
-                    :family "Victor Mono" :height 145 :weight 'normal)
+;;(set-face-attribute 'default nil
+;;                    :font (font-spec
+;;                           :family "Source Code Pro" :height 145 :weight 'normal))
 
 ;; copy from: https://github.com/cabins/emacs.d/blob/1bebdb984dd08ada00b4174b9fb4bd23464985a3/init.el
 ;; 操作系统变量名称
@@ -29,7 +30,7 @@
       display-time-day-and-date t   ;; 时间显示包括日期和具体时间
       display-time-use-mail-icon t   ;; 时间栏旁边启用邮件设置
       display-time-interval 10   ;; 时间的变化频率
-      display-time-format "%A %H:%M")   ;; 显示时间的格式
+      display-time-format "%y年%m月%d日 %H:%M")   ;; 显示时间的格式
 
 (unless (string-match-p "^Power N/A" (battery))   ; 笔记本上显示电量
   (display-battery-mode 1))
@@ -51,7 +52,7 @@
 ;;; startup
 ;; maximize window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-(setq inhibit-startup-screen 1)
+;;(setq inhibit-startup-screen 1)
 ;;(add-hook 'emacs-startup-hook (lambda () (split-window-right)))
 
 (setq desktop-load-locked-desktop t) ; don't popup dialog ask user, load anyway

@@ -38,6 +38,7 @@
 (require 'init-edit)
 (require 'init-locale)
 (require 'init-dired)
+(require 'init-font)
 
 ;; packages
 (require 'init-org)
