@@ -41,7 +41,7 @@
 
 ;; packages
 (require 'init-org)
-(require 'init-ivy)
+;; (require 'init-ivy)
 
 ;; Allow access from emacsclient
 (add-hook 'after-init-hook
