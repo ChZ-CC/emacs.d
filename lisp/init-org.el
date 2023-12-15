@@ -71,6 +71,13 @@
 #+DATE: %U
 #+HUGO_BASE_DIR: ../
 #+HUGO_SECTION: notes
+
+#+HUGO_TAGS: 
+#+HUGO_CATEGORIES:
+#+HUGO_CUSTOM_FRONT_MATTER: :toc true
+
+#+HUGO_DRAFT: true
+#+HUGO_SLUG: 
 ")))))
 
 (use-package org-superstar
