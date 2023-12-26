@@ -89,6 +89,40 @@
   :straight t
   :after (ox org-mode))
 
+;; 中文断行折行
+(add-hook 'org-mode-hook #'toggle-word-wrap)
+;; 同一个窗口打开链接
+(setq org-link-frame-setup '((file . find-file)))
+;; shift select
+(setq org-support-shift-select t)
+
+
+;;; Capturing
+
+(global-set-key (kbd "C-c c") 'org-capture)
+
+(setq org-capture-templates
+      `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
+         "* NEXT %?\n%U\n" :clock-resume t)
+        ("n" "note" entry (file "")
+         "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
+        ))
+
+
+;;; org todo
+(setq org-log-done t)
+
+(setq org-todo-keywords
+      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!/!)")
+              (sequence "PROJECT(p)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")
+              (sequence "WAITING(w@/!)" "DELEGATED(e!)" "HOLD(h)" "|" "CANCELLED(c@/!)")))
+      org-todo-repeat-to-state "NEXT")
+
+(setq org-todo-keyword-faces
+      (quote (("NEXT" :inherit warning)
+              ("PROJECT" :inherit font-lock-string-face))))
+
+
 (provide 'init-org)
 
 ;;; init-org.el ends here

@@ -43,6 +43,7 @@
 ;; packages
 (require 'init-org)
 ;; (require 'init-ivy)
+(require 'init-markdown)
 
 ;; Allow access from emacsclient
 (add-hook 'after-init-hook
@@ -60,6 +61,18 @@
 ;; Variables configured via the interactive 'customize' interface
 (when (file-exists-p custom-file)
   (load custom-file))
+
+;; time format
+(setq system-time-locale "C")
+;; (format-time-string "<%Y-%m-%d %a>")
+
+; insert-datetime
+(defun insert-datetime ()
+  "Insert date at point."
+    (interactive)
+    (insert (format-time-string "<%Y-%m-%d %a %H:%M:%S>")))
+
+(global-set-key (kbd "C-x t i") 'insert-datetime)
 
 (provide 'init)
 
